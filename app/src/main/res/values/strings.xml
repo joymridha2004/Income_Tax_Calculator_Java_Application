@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IncomeTaxCalculator</string>
+    <string name="version">Income Tax Calculator_V_0.0.01</string>
+    <string name="Income">Income</string>
+    <string name="enter_income">Enter your Income</string>
+    <string name="start">Start</string>
+    <string name="restart">Restart</string>
+    <string name="tax_details">Tax Details</string>
+</resources>
