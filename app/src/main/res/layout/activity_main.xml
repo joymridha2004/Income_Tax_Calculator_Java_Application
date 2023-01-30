@@ -49,12 +49,12 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/enter_Present_Number_System_Text_Input_EditT"
+            android:id="@+id/Enter_Income_Text_Input_EditT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
             android:gravity="top"
-            android:inputType="text"
+            android:inputType="number"
             android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,7 +65,9 @@
         android:layout_marginTop="188dp"
         android:background="@drawable/text_view_shape"
         android:elevation="10dp"
+        android:gravity="center"
         android:padding="10dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter_Income_TInputLayout"
