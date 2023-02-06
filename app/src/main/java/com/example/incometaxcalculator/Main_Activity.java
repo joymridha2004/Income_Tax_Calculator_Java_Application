@@ -1,13 +1,17 @@
 package com.example.incometaxcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +24,9 @@ public class Main_Activity extends AppCompatActivity {
     String Income = null;
     Float Tax = 0.0f, Income_Float = 0.0f;
     Float tax1 = 0.0f, Num = 0.0f;
+    TextView Project_Link;
+
+    ImageView github_link;
 
     /*-----------------Details DialogBox-----------------*/
 
@@ -32,6 +39,9 @@ public class Main_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*<------------Night mode disable--------->*/
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         /*-----------------Dialog-----------------*/
 
@@ -45,6 +55,28 @@ public class Main_Activity extends AppCompatActivity {
         resultTV = findViewById(R.id.result_TV);
         startButton = findViewById(R.id.start_Button);
         restartButton = findViewById(R.id.restart_Button);
+        github_link = findViewById(R.id.github_link);
+        Project_Link = findViewById(R.id.Project_Link);
+
+        /*<------------Handle_Github_link_On_click_Listener--------->*/
+
+        github_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/joymridha2004"));
+                startActivity(intent);
+            }
+        });
+
+        /*<------------Handle_Github_Project_Link_On_click_Listener--------->*/
+
+        Project_Link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/joymridha2004/Income_Tax_Calculator_Java_Application"));
+                startActivity(intent);
+            }
+        });
 
         /*-----------------Details Dialog-----------------*/
 
